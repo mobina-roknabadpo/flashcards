@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Trykker&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trykker', serif;
+}
+
+body {
+    background-color: #444;
+}
+
+header {
+    background-color: white;
+    box-shadow: 3px 2px 5px rgba(255, 255, 255, 0.51);
+}
+
+button {
+    border: 1px solid rgba(211, 211, 211, 0.51);
+    outline: none;
+    border-radius: 3px;
+    padding: 8px 20px;
+
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5px;
+    width: 100%;
+    font-family: inherit;
+
+}
+
+.create-box {
+    width: 760px;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.82);
+    background-color: white;
+    display: none;
+}
+
+.create-box h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.create-box textarea {
+    width: 100%;
+    border: 1px solid rgba(211, 211, 211, 0.51);
+    outline: none;
+    padding: 0 5px;
+    margin-top: 5px;
+}
+
+.flashcards {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 10px auto auto;
+    padding: 0 10px;
+
+}
+
+.flashcard {
+    width: 370px;
+    height: 200px;
+    word-wrap: break-word;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    position: relative;
+    border-radius: 4px;
+}
+
+
+.flashcard .question {
+    padding: 20px;
+    color: #333;
+    border-bottom: 2px solid #ff8000;
+}
+
+.flashcard .answer {
+    text-align: center;
+    color: lightgreen;
+    display: none;
+    margin: 20px auto;
+}
+
+.fill-input {
+    position: fixed;
+    bottom: 30px;
+    background-color: lightgreen;
+    padding: 10px 30px;
+    color: #444;
+    border-radius: 3px;
+    text-align: center;
+    display: none;
+
+}
+
+@media (max-width: 768px) {
+    .flashcard {
+        margin: auto;
+    }
+
+    .flashcard {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .create-box {
+        width: 100%;
+    }
+
+    .flashcard {
+        width: 100%;
+    }
+}
