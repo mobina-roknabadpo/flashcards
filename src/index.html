@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Flash Cards</title>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="nav">
+            <h1>Flashcards</h1>
+            <div>
+                <button onclick="showCreateCart()">New Cards</button>
+                <button onclick="delCards()">Del Cards</button>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="create-box">
+        <h2>create flashcards</h2>
+        <label for="question">Question</label>
+        <textarea id="question"></textarea>
+        <br>
+        <label for="answer">Answer</label>
+        <textarea id="answer"></textarea>
+        <div style="margin-top: 10px">
+            <button onclick="addFlashcard()">Save</button>
+            <button onclick="hideFlashCard()">Close</button>
+        </div>
+    </div>
+    <div class="flashcards">
+    </div>
+    <div class="fill-input">
+        <h3>please Enter the input!</h3>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
