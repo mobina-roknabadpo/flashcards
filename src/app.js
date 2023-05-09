@@ -12,7 +12,6 @@ const divMaker = (text) => {
     div.className = 'flashcard';
     h2_question.className = 'question';
     h2_answer.className = 'answer';
-    console.log(text)
     h2_question.innerHTML = text.my_question;
     h2_answer.innerHTML = text.my_answer;
     div.appendChild(h2_question);
@@ -35,12 +34,10 @@ const divMaker = (text) => {
     })
 }
 const addFlashcard = () => {
-    let flashcardInfo = {
+    const flashcardInfo = {
         my_question: question.value,
         my_answer: answer.value
     }
-    console.log("answer " + flashcardInfo.my_answer)
-    console.log("question " + flashcardInfo.my_question)
     divMaker(flashcardInfo);
     answer.value = "";
     question.value = "";
