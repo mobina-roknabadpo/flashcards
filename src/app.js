@@ -4,9 +4,6 @@ const question = document.getElementById('question');
 const answer = document.getElementById('answer');
 const fillInput = document.querySelector('.fill-input');
 
-// let contentArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
-// console.log(contentArray)
-let contentArray = [];
 
 const divMaker = (text) => {
     let div = document.createElement('div');
@@ -16,11 +13,8 @@ const divMaker = (text) => {
     h2_question.className = 'question';
     h2_answer.className = 'answer';
     console.log(text)
-    text.forEach(item => {
-        h2_question.innerHTML = item.my_question;
-        h2_answer.innerHTML = item.my_answer;
-        console.log(item.my_question, item.my_answer)
-    })
+    h2_question.innerHTML = text.my_question;
+    h2_answer.innerHTML = text.my_answer;
     div.appendChild(h2_question);
     div.appendChild(h2_answer);
     if (h2_question.textContent === "" || h2_answer.textContent === "") {
@@ -47,9 +41,7 @@ const addFlashcard = () => {
     }
     console.log("answer " + flashcardInfo.my_answer)
     console.log("question " + flashcardInfo.my_question)
-    contentArray.push(flashcardInfo);
-    // localStorage.setItem('items', JSON.stringify(contentArray));
-    divMaker(contentArray);
+    divMaker(flashcardInfo);
     answer.value = "";
     question.value = "";
 }
@@ -63,9 +55,7 @@ const hideFlashCard = () => {
 }
 
 const delCards = () => {
-    // localStorage.clear();
     flashcards.innerHTML = "";
-    contentArray = [];
 }
 
 const showFill = () => {
